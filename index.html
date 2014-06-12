@@ -1,0 +1,348 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script language="javascript">
+var nom,ancho,h,convertir;
+function converN(){
+	nom=document.getElementById("txtnom").value;
+	convierte=nom.toUpperCase();
+	document.getElementById("txtnom").value=convierte;
+	nom=document.getElementById("txtnom").value;
+	ancho=nom.length;
+	for(h=0;h<=ancho-1;h++){
+	if((nom.charAt(h)>='A')&&(nom.charAt(h)<='Z')||(nom.charAt(h)==" "))
+	{
+	}
+	else
+	{
+		alert("Introduciste datos númericos");
+		break;
+	}
+	}
+	}
+
+var cadena,ancho1,x,y,z,a,b;
+function correo(){
+cadena=document.getElementById("txtcorreo").value;
+ancho1=cadena.length;
+ 
+	if(((cadena.charAt(0)>='0')&&(cadena.charAt(0)<='9'))||(cadena.charAt(0)=='@'))
+	{
+			alert("Primer caracter inválido");
+		}
+	else
+	{
+		y=cadena.indexOf('@');
+		z=cadena.lastIndexOf('@');
+		if(y!=z){
+			alert("Solo introduce un @");
+			
+		}
+		else{
+			if((y==-1)&&(z==-1))
+			{
+			alert("Introduce un @");	
+			
+				}
+				else{
+					a=cadena.indexOf('.');
+					b=cadena.lastIndexOf('.');
+	          if(a!=b)
+			  {
+			  }
+			  else{
+				  if((a==-1)&&(b==-1)){
+					  alert("Introduce un punto");
+					  
+					  }
+			  }
+					}
+			}
+	
+	}		
+ }
+
+	
+
+
+
+var tele,hj,t;
+function telefono(){
+	tele=document.getElementById("txttel").value;
+	hj=tele.length;
+	for(t=0;t<=hj-1;t++){
+	if((tele.charAt(t)>=0)&&(tele.charAt(t)<=9)||(tele.charAt(t)==" ")||(tele.charAt(t)=='-'))
+	{
+	}
+	else
+	{
+		alert("Introduciste valor inválido");
+		break;
+	}
+	}
+}
+	
+	
+function asunto(){
+var	asunto=document.getElementById("txtasun").value;
+var	 convertir=asunto.toUpperCase();
+    document.getElementById("txtasun").value=convertir;
+	}
+	
+	
+function boton(){
+var	seg1=document.getElementById("txtseg1").value;
+var	seg2=document.getElementById("txtseg2").value;
+var	correo=document.getElementById("txtcorreo").value;
+var	asunto=document.getElementById("txtasun").value;
+var	nom=document.getElementById("txtnom").value;
+var	telefono=document.getElementById("txttel").value;	
+var s1=seg1.length;
+var s2=seg2.length;
+var c=correo.length;
+var s=asunto.length;
+var m=nom.length;
+var o=telefono.length;
+if((s1==0)||(s2==0)||(c==0)||(s==0)||(m==0)||(o==0)){
+	alert("Introducir todos los datos");
+}
+	else{
+		if(seg1!=seg2){
+			alert("Introduce el codigo de seguridad correctamente");
+		}
+			else{
+			
+		alert("Mensaje enviado");
+document.getElementById("txtnom").value="";
+document.getElementById("txtcorreo").value="";
+document.getElementById("txttel").value="";
+document.getElementById("txtasun").value="";
+document.getElementById("txtseg2").value="";
+		}
+	}	
+	}
+</script>
+
+
+</head> 
+<body> 
+/
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Ingenio Atencingo</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">¿Quiénes somos?</a></li>
+            <li><a href="#page3">Noticias</a></li>
+			<li><a href="#page4">Equipo</a></li>
+            <li><a href="#page5">Contáctanos</a></li>
+		</ul>	
+        <br>
+        <center> 
+          <img src="images/LogotipoATASAL-main.png" width="70%" height="40%">
+        </center> 	
+	</div>
+	<div data-role="footer">
+		<h4>Autor:Nestor Sanchez</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+<div data-role="header">
+		<h1>¿Quiénes Somos</h1>
+	</div>
+<div data-role="content">	
+<h1>Ingenio Atencingo</h1>
+Somos una empresa con grandes cualidades equitativas, tenemos el primer lugar en producción azucarera en el país, y tenemos el segundo lugar a nivel mundial, Atencingo es la mejor región en cosecha de caña de azúcar ya que nuestra empresa por 6 meses de trabajo (ZAFRA), se procesa casi 2 millones de toneladas de caña de azúcar en pocas palabras, somos el ingenio más productor de azúcar.
+
+<center> 
+  <img src="images/fabrica-tarde.jpg" width="50%" height="37%">
+</center>
+<h1>Misión</h1>
+   Endulzar, satisfaciendo necesidades alimenticias y energéticas de los clientes, con azúcar estándar de calidad 100% caña, mejorando nuestros procesos, el medio ambiente y el desarrollo de los colaboradores.
+   
+  <center> 
+    <img src="images/zacatepec_ingenio-11.jpg" width="45%" height="30%">
+  </center>
+  
+<h1>Visión</h1>
+  Nuestra Visión es ser la mejor empresa productora de azúcar a nivel mundial, ya que tenemos desde hace mucho tiempo el primer lugar a nivel nacional y ahora con nuestras altas cantidades de azúcar estándar esperamos con grandes cualidades ser el mejor ingenio del mundo.
+  
+ <center> 
+   <img src="images/caneros2.jpg" width="60%" height="45%">
+ </center>
+ 
+<h1>Valores y Principios</h1>
+<ul>
+<li>Cliente:Razón de ser y motivo de nuestra superación.</li>
+<li>Compromiso:Los resultados y el espíritu del servicio.</li>
+<li>Competitividad:Ser mejor en la industria.</li>
+<li>Equipo:Fuerza, unión y armonía para lograr objetivos comunes.</li>
+<li>Familia:Motor que nos da la energía para el bien "ser" y bien "estar" del equipo.</li>
+<br>
+<h1>Imagen.</h1>
+<ul>
+<li>"Uniendo esfuerzos cosechamos progreso en beneficio de nuestros clientes y nuestras familias"</li>
+</ul>
+<center>
+  <img src="images/NOTA-1-FOTO-3.jpg" width="80%" height="53%">
+</center>
+</div>
+<div data-role="footer">
+  <h4>Ingenio de Atencingo</h4>
+</div>
+</div>
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Noticias</h1>
+	</div>
+	<div data-role="content">	
+		<h1>Azúcar de Atencingo al Distrito Federal</h1>
+        
+        Más de 14 mil toneladas de azúcar se trasladan a bodegas del Distrito Federal debido a que las bodegas del Ingenio de Atencingo están a punto de llegar a su máxima capacidad lo que podría desencadenar que la zafra se detuviera en Atencingo, Puebla 
+        <br>
+   <center>
+     <img src="images/segunda.jpg" width="20%" height="20%">
+   </center> 
+   <h1>Detectan cañeros de Atencingo desfalco en KARBE</h1>
+   
+   El secretario General de la Confederación Nacional de Productores Rurales (CNPR) del Ingenio de Atencingo, Arturo David García Azcue, dijo que en la factoría se ha detectado un desfalco hacia los productores en cuanto al concepto Kilos de Azúcar Recuperables Base Estándar (KARBE)
+   
+ <center>  
+   <img src="images/primera.jpg" width="55%" height="36%">
+ </center> 
+ <h1>Liberan producción de azúcar en Atencingo</h1>
+ 
+ Debido a que las bodegas del ingenio Atencingo llegaron a 93% de su capacidad en almacenaje de azúcar, los cañeros -que mantienen desde hace 15 días bloqueados los accesos de la fábrica- permitieron este domingo la salida de los primeros cargamentos para evitar sobrecupo del producto.
+ 
+<center> 
+  <img src="images/4221a1fd-8e6b-4f30-bad9-d742884ee79a.jpg" width="80%" height="62%">
+</center>
+ </div>
+	<div data-role="footer">
+		<h4>Ingenio de Atencingo</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo de Trabajo</h1>
+	</div>
+	<div data-role="content">	
+		<center><h1>"Hermanitos 10"</h1></center>
+        Este equipo de trabajo se dedicó a trabajar día y noche para realizar este proyecto en Jquery y JavaScript, los nombres que conforman el equipo de trabajo son:
+ <center> 
+   <img src="images/IMG_20140605_092718.jpg" width="60%" height="50%">
+ </center>
+ 
+<h3>Nestor Sanchez</h3>
+<ul>
+<li><h4>Edad:</h4>16 Años.</li>
+<li><h4>Pasatiempos:</h4>Programar en JavaScript, Jugar con mis mascotas, patinar, etc</li>
+<li><h4>Descripción</h4>Amable con las personas buenas, Sociable, Inteligente, Fornido y Reservado</li>
+
+<center>
+  <img src="images/yOopi.jpg" width="70%" height="96%">
+</center>
+</ul>
+
+<h3>Iris Ruiz</h3>
+<ul>
+<li><h4>Edad:</h4>17 Años.</li>
+<li><h4>Pasatiempos:</h4>Jugar con los animales, jugar basquetball, ver TV principalmente Avenida Brazil, Comer de todo</li>
+<li><h4>Descripción</h4>Sociable, Divina, alta con grandes valores y principios, decente con grandes cualidades equitativas</li>
+
+<center>
+  <img src="images/eres.jpg" width="60%" height="90%">
+</center>
+</ul>
+
+<h3>Laura Mejia</h3>
+<ul>
+<li><h4>Edad:</h4>17 Años.</li>
+<li><h4>Pasatiempos:</h4>En pocas palabras Programar, y salir con los divinos</li>
+<li><h4>Descripción</h4>Sociable, linda, chaparrita, virgen, con muchas metas en la vida sociable con principios y valores eticos.</li>
+
+<center>
+  <img src="images/laura.jpg" width="90%" height="72%">
+</center>
+</ul>
+
+<h3>Miryan Estrada</h3>
+<ul>
+<li><h4>Edad:</h4>17 Años.</li>
+<li><h4>Pasatiempos:</h4>Estar en casa, internet, socializar un poco, etc.</li>
+<li><h4>Descripción</h4>chaparrita, reservada, bonita.....</li>
+
+<center>
+  <img src="images/milo.jpg" width="64%" height="96%">
+</center>
+</ul>
+
+<h3>Uriel Baizan</h3>
+<ul>
+<li><h4>Edad:</h4>17 Años.</li>
+<li><h4>Pasatiempos:</h4>Salir a divertirse al zocalito, salir con su novia, jugar videojuegos, ayudar en los deberes hogareños....etc.</li>
+<li><h4>Descripción</h4>medio alto, complexion delgada, color de piel morena. respetuoso, amable...etc.</li>
+
+<center>
+  <img src="images/vidals.jpg" width="72%" height="72%">
+</center>
+</ul>
+
+
+ </div>
+	<div data-role="footer">
+		<h4>Ingenio de Atencingo</h4>
+        
+	</div>
+</div>
+
+<div data-role="page" id="page5">
+     <div data-role="header">
+          <h1>Contacto</h1>
+          </div>
+      <div data-role="content">
+      <table width="0" border="0">
+  <tr>
+    <td> <label for="textinput">Nombre:</label></td>
+    <td><input type="text" name="txtnom" id="txtnom" value="" onBlur="converN()" /></td>
+  </tr>
+  <tr>
+    <td> <label for="textinput">Email:</label></td>
+    <td><input type="text" name="txtcorreo" id="txtcorreo" value="" onBlur="correo()" /></td>
+  </tr>
+  <tr>
+    <td> <label for="textinput">Telefono:</label></td>
+    <td><input type="text" name="txttel" id="txttel" value=""  onBlur="telefono()"/></td>
+  </tr>
+  <tr>
+    <td><label for="textarea">Asunto:</label> </td>
+    <td>  <textarea cols="40" rows="8" name="txtasun" id="txtasun" onBlur="asunto()"></textarea></td>
+  </tr>
+  <tr>
+    <td> <label for="textinput">Seguridad:</label></td>
+    <td>
+    <input type="text" name="txtseg1" id="txtseg1" value="1997" disabled="disabled"/>
+    <input type="text" name="txtseg2" id="txtseg2" value=""  /></td>
+  </tr>
+   <tr>
+    <td colspan="2"><button onClick="boton()">Enviar</button></td>
+    
+  </tr>
+</table>
+     
+      </div>
+      <div data-role="footer">
+      <h4>Ingenio Atencingo</h4>
+      </div>
+      </div>    
+
+</body>
+</html>
